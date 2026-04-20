@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        body {
+            background-color: rgb(47, 222, 225);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            font-family: sans-serif;
+        }
+
+       
+        .navbar {
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            gap: 20px;
+            box-sizing: border-box;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+            padding: 8px 20px;
+            font-size: 18px;
+        }
+
+        .navbar a.active {
+            background-color: rgb(45, 155, 195);
+            color: white;
+            border-radius: 20px;
+        }
+
+       
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        
+        .card {
+            width: 350px;
+            padding: 30px;
+            background-color: rgb(151, 255, 210); 
+            text-align: center;
+            border-radius: 40px;
+            box-shadow: 15px 15px 0px rgb(41, 32, 32);
+            transition: 0.5s ease;
+        }
+
+        
+        .card img {
+            width: 180px; 
+            height: 180px; 
+            object-fit: cover;
+            border-radius: 20px;
+            display: block;
+            margin: 0 auto 15px auto;
+        }
+
+        .card h1 {
+            margin: 10px 0;
+            font-size: 28px;
+        }
+
+        .card p {
+            color: #333;
+            line-height: 1.5;
+        }
+
+        /* Tugma */
+        .card button {
+            background-color: rgb(45, 155, 195);
+            color: blue;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .card:hover {
+            background-color: rgb(50, 116, 209);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="active">Card 1</a>
+        <a href="about.html">Card 2</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTA3L3Jhd3BpeGVsX29mZmljZV80MV9wb3J0cmFpdF9vZl9waG90b19vZl9idXNpbmVzc19tYW5fZG9pbmdfY3Jvc19hYzI5NmNmMy1hZmQ4LTQ3ZDQtYTY1NS1mZWVjMGZhMDU5ZWMucG5n.png  " alt="Profile">
+            <h1>Salom👋</h1>
+            <p>Mening ismim Aminboyev Shahriyor..</p>
+            <button>CARD</button>
+        </div>
+    </div>
+
+</body>
+</html>
