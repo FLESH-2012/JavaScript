@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amaliy mashq</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  transform-style: preserve-3d;
+}
+
+.content {
+  text-align: center;
+  color: white;
+  transform: translateZ(50px);
+}
+
+h2 {
+  font-size: 32px;
+}
+
+p {
+  margin: 15px 0;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #00c6ff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0072ff;
+}
+    </style>
+</head>
+<body>
+<div class="card">
+  <div class="content">
+    <h2>Frontend</h2>
+    <p>Beautiful UI Design</p>
+    <button>Explore</button>
+  </div>
+</div>
+
+<script src="script.js">
+    const card = document.querySelector(".card");
+
+card.addEventListener("mousemove", (e) => {
+  const x = e.offsetX;
+  const y = e.offsetY;
+
+  const centerX = card.offsetWidth / 2;
+  const centerY = card.offsetHeight / 2;
+
+  const rotateX = -(y - centerY) / 10;
+  const rotateY = (x - centerX) / 10;
+
+  card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+});
+
+card.addEventListener("mouseleave", () => {
+  card.style.transform = "rotateX(0) rotateY(0)";
+});
+</script>
+</body>
+</html>
+</body>
+</html>

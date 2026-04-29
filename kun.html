@@ -6,16 +6,22 @@
     <title>JavaScript</title>
 </head>
 <body>
-    <h1 id="greeting">Salom Dunyo...</h1>
-    <button id="change">O'zgartir</button>
-
-    <script>
-        let greeting =document.getElementById('greeting');
-         let change =   document.getElementById('change');
-
-         change.addEventListener('click', () => {
-            greeting,textContent = "Hayr Dunyo..."
-         })
-    </script>
+   <input type="text" id="inp1">
+   <input type="text" id="inp2">
+   <button id="calc">+</button>
+<hr>
+<h1>Natija:</h1>
+   <script>
+    let.inp1 =document.getElementById('inp1');
+    let.inp2 =document.getElementById('inp2');
+    let.calc =document.getElementById('calc');
+    
+    calc.addEventListener('click' () => {
+      let num1 = inp1.value;
+      let num2 = inp2.value;
+      let calc = calc.value;
+      let sum = Number (inp1) + Number (inp2)
+    })
+   </script>
 </body>
 </html>
